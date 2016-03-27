@@ -1,36 +1,41 @@
 
-=======
 # Tumblelog
 This application permits to create and edit a collection in the MongoDB database(database_tumble) with a python shell.
 it's the first step towards a site tumblelog application
 
-# Requirements
+====================
+
+## Requirements
 This app is made in an Ubuntu 14.04 environment. 
 So the install is quite easy. As shown in the MongoDB tutorial, you must 
 
 * Have the python environment:
 
-** sudo pip install virtualenv
-** virtualenv tumblelog
-** source tumblelog/bin/activate
+        sudo pip install virtualenv
+
+        virtualenv tumblelog
+
+        source tumblelog/bin/activate
 
 * All the frameworks you need (at this level):
 
-** sudo pip install \
+        sudo pip install \
 
-** flask \
+        flask \
 
-** flask-script \
+        flask-script \
 
-** mongoengine \
+        mongoengine \
 
-** flask_mongoengine \
+        flask_mongoengine \
 
-** ipython
+        ipython
 
-It's obvious that you already have a mongodb instance running on.
+*It's obvious that you already have a mongodb instance running on.*
 
-# Build
+===============================
+
+## Build
 
 after have cloned the repository, 
 you must run the python command:
@@ -39,33 +44,35 @@ you must run the python command:
 
 The ipyhton terminal will come up. Inside it, you can post(title,slug,body) some and comment(author,body) about it.
 
-# Exemple:
+=======================
+
+## Exemple:
 
 + Build a collection named post:
 
-    post = Post(
+        post = Post(
     
-    'title':'The post',
+        'title':'The post',
     
-    'slug':'Interesting post',
+        'slug':'Interesting post',
     
-    'body':'This is my first post, and my first application build on Mongo')
+        'body':'This is my first post, and my first application build on Mongo')
     
 + Save the data in the post collection:
 
-* post.save() 
+        post.save() 
 
 + Now, it's time to add comments on the post:
 
-    comment = Comment(
+        comment = Comment(
     
-    'author':'Gilles ESSOKI NDAME',
+        'author':'Gilles ESSOKI NDAME',
     
-    'body':"This is my first comment on the 'The post' post")
+        'body':"This is my first comment on the 'The post' post")
 
 + Then, add the comment in the appropriate post:
 
-* post.comments.append(comment)
+        post.comments.append(comment)
 
 # Verify
 
@@ -82,6 +89,7 @@ You should open a terminal and do:
 As the result of the last part, you should have:
 
 {
+
 	"_cls" : "Post",
     
 	"_id" : ObjectId("56f7fecc44004a1d494341e7"),
