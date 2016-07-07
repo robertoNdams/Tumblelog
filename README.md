@@ -19,17 +19,7 @@ So the install is quite easy. As shown in the MongoDB tutorial, you must
 
 * All the frameworks you need (at this level):
 
-        sudo pip install \
-
-        flask \
-
-        flask-script \
-
-        mongoengine \
-
-        flask_mongoengine \
-
-        ipython
+        pip install -r requirements.txt  
 
 *It's obvious that you already have a mongodb instance running on.*
 
